@@ -1,0 +1,27 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Отпуск",
+      "done": false
+    },
+    {
+      "id": 2,
+      "name": "Работа",
+      "done": true
+    },
+    {
+      "id": 3,
+      "name": "Казино",
+      "done": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Сделать курсач",
+      "listID": 1,
+      "done": false
+    }
+  ]
+}
