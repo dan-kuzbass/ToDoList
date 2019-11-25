@@ -4,9 +4,8 @@ import { connect } from "react-redux";
 import { addTodoAction } from "../actions/todos";
 import { View, TextInput, Modal, Dimensions } from "react-native";
 import { Link } from "react-router-native";
-import axios from "axios";
 import Icon from "react-native-vector-icons/MaterialIcons";
-
+import { getAllTodos } from "../actions/todos";
 
 const Todos = props => {
   const [newTodoListName, setNewTodoListName] = useState("");
@@ -16,14 +15,7 @@ const Todos = props => {
   };
   const { width } = Dimensions.get('window');
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/dan-kuzbass/ToDoList/todos')
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+    props.getAllTodos();
   });
   return (
     <Container>
@@ -97,5 +89,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, {
-  addTodoAction
+  getAllTodos
 })(Todos);

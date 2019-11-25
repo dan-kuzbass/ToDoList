@@ -1,15 +1,17 @@
 import * as types from "../constants/actionTypes";
 
 const initialState = {
-  todos: [
-    { id: "1", name: "Отпуск", done: false },
-    { id: "2", name: "Работа", done: true },
-    { id: "3", name: "Казино", done: true },
-  ]
+  todos: []
 }
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
+    case types.GET_TODOS:
+      console.log(action.data);
+      return {
+        ...state,
+        todos: action.data
+      };
     case types.ADD_TO_DO:
       return {
         ...state,
