@@ -28,6 +28,7 @@ const Todos = props => {
   useEffect(() => {
     props.getAllTodos();
   });
+  const colors = ["white", "green", "gray"]
   return (
     <Container>
       <Header>
@@ -40,7 +41,8 @@ const Todos = props => {
       <Content>
         <List>
           {props.todos.map((todo, index) => {
-            return <ListItem key={index} noIndent style={todo.done ? { backgroundColor: "green" } : { backgroundColor: "white" }}>
+            console.log(todo.tasks);
+            return <ListItem key={index} noIndent style={{ backgroundColor: `${colors[todo.tasks]}` }}>
               <View style={{ flex: 5 }}>
                 <Link to={`/tasks/${index + 1}`}>
                   <Text>{todo.name}</Text>

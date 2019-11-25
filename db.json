@@ -3,17 +3,20 @@
     {
       "id": 1,
       "name": "Отпуск",
-      "done": false
+      "done": false,
+      "tasks": 2
     },
     {
       "id": 2,
       "name": "Работа",
-      "done": true
+      "done": true,
+      "tasks": 0
     },
     {
       "id": 3,
       "name": "Прочее",
-      "done": true
+      "done": true,
+      "tasks": 1
     }
   ],
   "tasks": [
