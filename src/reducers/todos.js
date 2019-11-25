@@ -7,7 +7,6 @@ const initialState = {
 export default function todos(state = initialState, action) {
   switch (action.type) {
     case types.GET_TODOS:
-      console.log(action.data);
       return {
         ...state,
         todos: action.data
