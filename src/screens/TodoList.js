@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-native";
 import { connect } from "react-redux";
-import { Container, Button, Content, List, ListItem, Text } from "native-base";
+import {
+  Container,
+  Button,
+  Content,
+  List,
+  ListItem,
+  Text,
+  Header,
+  Body,
+  Title,
+  Left,
+  Right
+} from "native-base";
 import { View, TextInput, Modal } from "react-native";
 import { addTaskAction } from "../actions/tasks";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import moment from "moment";
 
 const TodoList = props => {
   //.filter(task => task.listID === props.match.params.id)
@@ -25,6 +36,21 @@ const TodoList = props => {
   };
   return (
     <Container>
+      <Header>
+        <Left>
+          <Link to="/">
+            <Icon
+              name="arrow-back"
+              size={25}
+              // onPress={() => { }}
+            />
+          </Link>
+        </Left>
+        <Body>
+          <Title>Список дел</Title>
+        </Body>
+        <Right />
+      </Header>
       <Content>
         <List>
           {props.tasks.filter(task => task.listID === props.match.params.id).sort((a, b) => {
@@ -39,9 +65,7 @@ const TodoList = props => {
           }).map((task, index) => {
             return <ListItem key={index} noIndent style={task.done ? { backgroundColor: "green" } : { backgroundColor: "white" }}>
               <View style={{ flex: 3 }}>
-                <Link to="/">
-                  <Text>{task.name}</Text>
-                </Link>
+                <Text>{task.name}</Text>
               </View>
               <View style={{ flex: 4 }}>
                 <Text>{task.created_time}</Text>

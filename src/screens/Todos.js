@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Container, Button, Content, List, ListItem, Text } from "native-base";
+import { 
+  Container, 
+  Button, 
+  Content, 
+  List, 
+  ListItem, 
+  Text,
+  Header,
+  Body,
+  Title,
+  Left,
+  Right } from "native-base";
 import { connect } from "react-redux";
 import { addTodoAction } from "../actions/todos";
 import { View, TextInput, Modal, Dimensions } from "react-native";
@@ -19,6 +30,13 @@ const Todos = props => {
   });
   return (
     <Container>
+      <Header>
+        <Left />
+        <Body>
+          <Title>Списки дел</Title>
+        </Body>
+        <Right />
+      </Header>
       <Content>
         <List>
           {props.todos.map((todo, index) => {
@@ -40,6 +58,7 @@ const Todos = props => {
                   name="delete"
                   size={25}
                   onPress={() => { }}
+                  color="red"
                 />
               </View>
             </ListItem>
