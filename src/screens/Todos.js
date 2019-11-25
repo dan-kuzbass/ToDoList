@@ -41,7 +41,6 @@ const Todos = props => {
       <Content>
         <List>
           {props.todos.map((todo, index) => {
-            console.log(todo.tasks);
             return <ListItem key={index} noIndent style={{ backgroundColor: `${colors[todo.tasks]}` }}>
               <View style={{ flex: 5 }}>
                 <Link to={`/tasks/${index + 1}`}>
