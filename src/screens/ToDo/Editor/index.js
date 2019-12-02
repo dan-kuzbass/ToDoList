@@ -25,7 +25,6 @@ const TodoListEditor = props => {
 
   const editTodo = () => {
     const namesTodo = props.todos.map(todo => { return todo.name }).filter(name => name !== props.todo.name);
-    console.log(namesTodo)
     if (namesTodo.includes(newTodoListName)) {
       ToastAndroid.show(`Список дел ${newTodoListName} уже существует!`, 3000)
     }
