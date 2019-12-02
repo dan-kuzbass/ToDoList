@@ -34,7 +34,7 @@ const TodoListCreator = props => {
     setNewTaskName("");
     setChecked(false);
   }, [props.tasks]);
-  const id = `f${(Math.floor(Math.random() * 1e8)).toString(16)}`; //~~
+  const id = `f${(Math.floor(Math.random() * 1e8)).toString(16)}`;
   const addTask = () => {
     const namesTask = props.tasks.map(task => { return task.name });
     if (namesTask.includes(newTaskName)) {
