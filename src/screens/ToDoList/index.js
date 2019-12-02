@@ -15,7 +15,7 @@ import {
   Footer,
   CheckBox
 } from "native-base";
-import { View } from "react-native";
+import { View, ToastAndroid } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ToDoListCreator from "./Creator";
 import ToDoListEditor from "./Editor";
@@ -55,23 +55,23 @@ const TodoList = props => {
               onPress={() => { setChoose(task) }} />
           </View>
           <View style={{ flex: 3 }}>
-            <Text>{task.name}</Text>
+            <Text style={{textAlign: "center"}}>{task.name}</Text>
           </View>
           <View style={{ flex: 4 }}>
             <Text>{task.created_time}</Text>
           </View>
-          <View style={{ flex: 1, flexDirection: "row-reverse" }}>
+          <View style={{ flex: 1 }}>
             <Icon
               name="edit"
               size={25}
               onPress={() => { setEditorModalVisible(true); setEditableItem(task) }}
             />
           </View>
-          <View style={{ flex: 1, flexDirection: "row-reverse" }}>
+          <View style={{ flex: 1 }}>
             <Icon
               name="delete"
               size={25}
-              onPress={() => { props.deleteTaskAction(task.id) }}
+              onPress={() => { props.deleteTaskAction(task.id); ToastAndroid.show(`Дело ${task.name} удалено!`, 3000) }}
               color="red"
             />
           </View>
