@@ -1,27 +1,38 @@
 import * as types from "../constants/actionTypes";
 import axios from "axios";
 
-export const getAllTodos = () => {
+export const addTodoAction = todo => {
   return async (dispatch) => {
     try {
-      const response = await axios.get('https://my-json-server.typicode.com/dan-kuzbass/ToDoList/todos');
       return dispatch({
-        type: types.GET_TODOS,
-        data: response.data,
+        type: types.ADD_TO_DO,
+        todo,
       });
     } catch (error) {
       throw (error);
     }
   };
-}
+};
 
-export const addTodoAction = data => {
+export const editTodoAction = todo => {
   return async (dispatch) => {
     try {
-
       return dispatch({
-        type: types.ADD_TO_DO,
-        data,
+        type: types.EDIT_TO_DO,
+        todo
+      });
+    } catch (error) {
+      throw (error);
+    }
+  };
+};
+
+export const deleteTodoAction = id => {
+  return async (dispatch) => {
+    try {
+      return dispatch({
+        type: types.DELETE_TO_DO,
+        id
       });
     } catch (error) {
       throw (error);
