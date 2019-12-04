@@ -15,7 +15,7 @@ import {
   Picker
 } from "native-base";
 import { connect } from "react-redux";
-import { addTodoAction, deleteTodoAction } from "../../actions/todos";
+import { deleteTodoAction } from "../../actions/todos";
 import { View, ToastAndroid } from "react-native";
 import { Link } from "react-router-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -131,6 +131,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, {
-  addTodoAction,
   deleteTodoAction
 })(Todos);

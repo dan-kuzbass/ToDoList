@@ -4,18 +4,33 @@ const initialState = {
   todos: [
     {
       id: "f5d47a01",
-      name: "Отпуск",
-      tasks: 2
+      name: "Сходить в магазин",
+      tasks: 0
     },
     {
       id: "f5d47a02",
-      name: "Работа",
+      name: "Планы на 2020",
       tasks: 0
     },
     {
       id: "f5d47a03",
-      name: "Прочее",
+      name: "Отпуск",
       tasks: 1
+    },
+    {
+      id: "f5d47a04",
+      name: "Планы на март",
+      tasks: 1
+    },
+    {
+      id: "f5d47a05",
+      name: "Планы на апрель",
+      tasks: 2
+    },
+    {
+      id: "f5d47a06",
+      name: "Учёба",
+      tasks: 2
     }
   ]
 }

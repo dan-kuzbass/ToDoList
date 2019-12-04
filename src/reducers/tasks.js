@@ -4,25 +4,145 @@ const initialState = {
   tasks: [
     {
       id: "f5d47a11",
-      name: "Выучить react native",
-      listID: "f5d47a02",
+      name: "Хлеб",
+      listID: "f5d47a01",
       done: false,
       immediate: false,
       created_time: "01.01.2019 13:55"
     },
     {
       id: "f5d47a12",
-      name: "Сходить погулять",
+      name: "Молоко",
+      listID: "f5d47a01",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a13",
+      name: "Чай",
+      listID: "f5d47a01",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a14",
+      name: "Выучить react-native",
+      listID: "f5d47a02",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a15",
+      name: "Получить диплом",
+      listID: "f5d47a02",
+      done: false,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a16",
+      name: "Съездить в Казахстан",
+      listID: "f5d47a02",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a17",
+      name: "Что то",
+      listID: "f5d47a03",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a18",
+      name: "Что то",
       listID: "f5d47a03",
       done: true,
       immediate: true,
       created_time: "01.01.2019 13:55"
     },
     {
-      id: "f5d47a13",
-      name: "Сделать курсач",
-      listID: "f5d47a01",
+      id: "f5d47a19",
+      name: "Что то",
+      listID: "f5d47a03",
       done: false,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a20",
+      name: "Что то",
+      listID: "f5d47a04",
+      done: false,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a21",
+      name: "Что то",
+      listID: "f5d47a04",
+      done: true,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a22",
+      name: "Что то",
+      listID: "f5d47a04",
+      done: false,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a23",
+      name: "Что то",
+      listID: "f5d47a05",
+      done: true,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a24",
+      name: "Что то",
+      listID: "f5d47a05",
+      done: true,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a25",
+      name: "Что то",
+      listID: "f5d47a05",
+      done: true,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a26",
+      name: "Что то",
+      listID: "f5d47a06",
+      done: true,
+      immediate: false,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a27",
+      name: "Что то",
+      listID: "f5d47a06",
+      done: true,
+      immediate: true,
+      created_time: "01.01.2019 13:55"
+    },
+    {
+      id: "f5d47a28",
+      name: "Что то",
+      listID: "f5d47a06",
+      done: true,
       immediate: true,
       created_time: "01.01.2019 13:55"
     }
